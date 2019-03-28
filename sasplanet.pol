@@ -1,7 +1,7 @@
 #!/bin/bash
-# Date : 2016-02-23 13:37
-# Last revision : 2016-02-23 13:44
-# Wine version used : 1.6.2
+# Date : 2019-03-28 13:37
+# Last revision : 2019-03-28 13:44
+# Wine version used : 3.0.2
 # Distribution used to test : Manjaro Mate
 # Author : Sylvain POULAIN
 [ "$PLAYONLINUX" = "" ] && exit 0
@@ -16,7 +16,7 @@ POL_SetupWindow_Init
 POL_SetupWindow_presentation "$TITLE" "SAS.Team" "https://bitbucket.org/sas_team/sas.planet.bin" "Sylvain POULAIN" "$TITLE"
 
 POL_Wine_SelectPrefix "$PREFIX"
-POL_Wine_PrefixCreate "1.6.2"
+POL_Wine_PrefixCreate "3.0.2"
 Set_OS "winxp" 
 POL_System_TmpCreate "$PREFIX"
  
@@ -28,14 +28,14 @@ then
     POL_SetupWindow_wait "Installation in progress." "$TITLE installation"
     cp "$APP_ANSWER" "$POL_System_TmpDir"
 	cd "$POL_System_TmpDir"
-	unzip SAS.Planet.Release.151111.zip
-	mv "SAS.Planet.Release.151111" "$WINEPREFIX/drive_c/Program Files/SAS.Planet"
+	unzip SAS.Planet.Release.181221.zip
+	mv "SAS.Planet.Release.181221" "$WINEPREFIX/drive_c/Program Files/SAS.Planet"
 elif [ "$INSTALL_METHOD" = "DOWNLOAD" ]
 then
     cd "$POL_System_TmpDir"
-    POL_Download "https://bitbucket.org/sas_team/sas.planet.bin/downloads/SAS.Planet.Release.151111.zip"
-	unzip SAS.Planet.Release.151111.zip 
-	mv "SAS.Planet.Release.151111" "$WINEPREFIX/drive_c/Program Files/SAS.Planet"
+    POL_Download "https://bitbucket.org/sas_team/sas.planet.bin/downloads/SAS.Planet.Release.181221.zip"
+	unzip SAS.Planet.Release.181221.zip 
+	mv "SAS.Planet.Release.181221" "$WINEPREFIX/drive_c/Program Files/SAS.Planet"
 fi
  
 POL_System_TmpDelete
