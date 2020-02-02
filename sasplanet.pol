@@ -28,14 +28,14 @@ then
     POL_SetupWindow_wait "Installation in progress." "$TITLE installation"
     cp "$APP_ANSWER" "$POL_System_TmpDir"
 	cd "$POL_System_TmpDir"
-	unzip SAS.Planet.Release.181221.zip
-	mv "SAS.Planet.Release.181221" "$WINEPREFIX/drive_c/Program Files/SAS.Planet"
+	unzip SAS.Planet.Release.191221.zip
+	mv "SAS.Planet.Release.191221" "$WINEPREFIX/drive_c/Program Files/SAS.Planet"
 elif [ "$INSTALL_METHOD" = "DOWNLOAD" ]
 then
     cd "$POL_System_TmpDir"
-    POL_Download "https://bitbucket.org/sas_team/sas.planet.bin/downloads/SAS.Planet.Release.181221.zip"
-	unzip SAS.Planet.Release.181221.zip 
-	mv "SAS.Planet.Release.181221" "$WINEPREFIX/drive_c/Program Files/SAS.Planet"
+    POL_Download "https://bitbucket.org/sas_team/sas.planet.bin/downloads/SAS.Planet.Release.191221.zip"
+	unzip SAS.Planet.Release.191221.zip 
+	mv "SAS.Planet.Release.191221" "$WINEPREFIX/drive_c/Program Files/SAS.Planet"
 fi
  
 POL_System_TmpDelete
